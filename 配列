@@ -1,0 +1,27 @@
+int numbers[] = {10, 20, 30, 40, 50};
+
+void setup() {
+  Serial.begin(9600);
+
+  // Wait for Serial Monitor to open
+  while (!Serial) {
+    delay(10);
+  }
+
+  Serial.println("Start");
+
+  Serial.print("numbers[0] = ");
+  Serial.println(numbers[0]);
+
+  Serial.print("numbers[1] = ");
+  Serial.println(numbers[1]);
+
+  Serial.print("numbers[2] = ");
+  Serial.println(numbers[2]);
+  
+　Serial.println("End");
+}
+
+void loop() {
+  
+}
