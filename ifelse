@@ -1,0 +1,33 @@
+int number = 0;
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Start");
+}
+
+
+void loop() {
+  
+  Serial.print("number = ");
+  Serial.println(number);
+
+  if (number < 3) {
+    Serial.println("Less than 3");
+  } else {
+    Serial.println("3 or more");
+  }
+
+  if (number % 2 == 0) {
+    Serial.println("Even");
+  } else {
+    Serial.println("Odd");
+  }
+
+  number++;
+
+  if (number > 5) {
+    number = 0;
+  }
+
+  delay(1000);
+}
