@@ -1,0 +1,38 @@
+int mode = 1;
+
+void setup() {
+  Serial.begin(9600);
+
+  while (!Serial) {
+    delay(10);
+  }
+
+  Serial.println("Start");
+}
+
+void loop() {
+  Serial.print("Current mode: ");
+  Serial.println(mode);
+
+  switch (mode) {
+    case 1:
+      Serial.println("Hello!");
+      break;
+
+    case 2:
+      Serial.println("Good night!");
+      break;
+
+    default:
+      Serial.println("Hi!");
+      break;
+  }
+
+  mode++;
+
+  if (mode > 3) {
+    mode = 1;
+  }
+
+  delay(500);
+}
